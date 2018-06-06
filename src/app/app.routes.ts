@@ -24,7 +24,7 @@ export const allAppComponents = [ HomeComponent];
 
 //an array of routes that will be passed of to the module
 export const routes: Routes = [
-	{path: "", component: HomeComponent}
+
 
 
 ];
