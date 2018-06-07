@@ -14,6 +14,7 @@ import {HTTP_INTERCEPTORS} from "@angular/common/http";
 
 
 import {SessionService} from "./shared/services/session.service";
+import {PostService} from "./shared/services/post.service";
 
 
 
@@ -30,7 +31,7 @@ export const routes: Routes = [
 
 // an array of services
 
-const services : any[] = [ SessionService];
+const services : any[] = [ SessionService, PostService];
 
 // an array of misc providers
 const providers : any[] = [

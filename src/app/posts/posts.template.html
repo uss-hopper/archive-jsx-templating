@@ -12,12 +12,12 @@
 
 			<div class="card-columns">
 
-				<div class="card p-3">
+				<div class="card p-3" *ngFor="let post of posts">
 					<blockquote class="blockquote mb-0 card-body">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+						<p>{{post.postContent}}</p>
 						<footer class="blockquote-footer">
 							<small class="text-muted">
-								Someone famous in <cite title="Source Title">Source Title</cite>
+								<cite title="Source Title">{{post.postTitle}}</cite> {{post.postDate}}
 							</small>
 						</footer>
 					</blockquote>
