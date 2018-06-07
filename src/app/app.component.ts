@@ -12,8 +12,6 @@ export class AppComponent{
 
 	status : Status = null;
 
-	constructor(protected sessionService : SessionService) {
-		this.sessionService.setSession()
-			.subscribe(status => this.status = status);
+	constructor() {
 	}
 }
