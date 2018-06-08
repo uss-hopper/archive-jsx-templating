@@ -8,6 +8,16 @@
 				<div class="col">
 					<h1>Meow Forum</h1>
 				</div>
+
+				<form [formGroup]="kittyForm" (ngSubmit)="createKittyPost();" novalidate >
+					<div class="form-group">
+						<input type="text" class="form-control" name="postTitle" id="postTitle" placeholder="Title" formControlName="postTitle">
+					</div>
+					<div class="form-group">
+						<textarea name="postContent" id="postContent" class="form-control" placeholder="2000 chars max" rows="10" formControlName="postContent"></textarea>
+					</div>
+					<button type="submit" class="btn btn-block btn-warning mb-3">Submit</button>
+				</form>
 			</div>
 
 			<div class="card-columns">
@@ -17,7 +27,7 @@
 						<p>{{post.postContent}}</p>
 						<footer class="blockquote-footer">
 							<small class="text-muted">
-								<cite title="Source Title">{{post.postTitle}}</cite> {{post.postDate}}
+								<cite title="Source Title">{{post.postTitle}}</cite> {{post.postDate | date}}
 							</small>
 						</footer>
 					</blockquote>
