@@ -6,10 +6,4 @@ import {Component} from "@angular/core";
 })
 export class HomeComponent{
 
-
-
-//	status : Status = null;
-
-	constructor() {}
-
 }

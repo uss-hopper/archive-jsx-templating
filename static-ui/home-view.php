@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
 
-	<?php require_once ("head-utils.php");?>
 
-	<body class="sfooter">
+	<div class="sfooter">
 		<div class="sfooter-content">
 
-			<?php require_once("navbar.php");?>
 
 			<main class="d-flex align-items-end align-items-md-center mh-80">
 				<div class="container-fluid text-center text-md-left">
@@ -46,10 +42,7 @@
 			</main>
 
 		</div>
+	</div>
 
-		<?php require_once("footer.php");?>
 
-		<?php require_once("sign-up-modal.php");?>
 
-	</body>
-</html>
