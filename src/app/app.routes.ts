@@ -19,12 +19,12 @@ import {PostService} from "./shared/services/post.service";
 
 
 //an array of the components that will be passed off to the module
-export const allAppComponents = [ HomeComponent, NavbarComponent, PostsComponent];
+export const allAppComponents = [ HomeComponent];
 
 //an array of routes that will be passed of to the module
 export const routes: Routes = [
 	{path: "", component: HomeComponent},
-	{path:"posts", component: PostsComponent}
+
 
 
 ];
