@@ -1,4 +1,4 @@
-// Angular 5
+// Angular 6
 import "@angular/platform-browser";
 import "@angular/platform-browser-dynamic";
 import "@angular/core";
@@ -12,7 +12,7 @@ import "rxjs";
 // You can import js, ts, css, sass, ...
 import "jquery";
 import "bootstrap";
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 // font awesome
 import "@fortawesome/fontawesome";
