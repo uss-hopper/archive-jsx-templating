@@ -15,14 +15,17 @@ import {HTTP_INTERCEPTORS} from "@angular/common/http";
 import {SessionService} from "./shared/services/session.service";
 import {PostService} from "./shared/services/post.service";
 import {NavBarComponent} from "./shared/components/nav-bar/nav-bar.component";
+import {PostsComponent} from "./posts/posts.component";
 
 
 //an array of the components that will be passed off to the module
-export const allAppComponents = [HomeComponent, NavBarComponent];
+export const allAppComponents = [HomeComponent, NavBarComponent, PostsComponent];
 
 //an array of routes that will be passed of to the module
 export const routes: Routes = [
+	{path: "posts", component: PostsComponent},
 	{path: "", component: HomeComponent}
+
 ];
 
 // an array of services
