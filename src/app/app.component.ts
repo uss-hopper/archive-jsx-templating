@@ -1,5 +1,5 @@
 import {Component, OnInit} from "@angular/core";
-import {Status} from "./shared/interfaces/status";
+import {Status} from "./shared/classes/status";
 import {SessionService} from "./shared/services/session.service";
 
 @Component({
@@ -8,6 +8,12 @@ import {SessionService} from "./shared/services/session.service";
 })
 export class AppComponent{
 
-	constructor() {
+
+
+	status : Status = null;
+
+	constructor(protected sessionService : SessionService) {
+		this.sessionService.setSession()
+			.subscribe(status => this.status = status);
 	}
 }

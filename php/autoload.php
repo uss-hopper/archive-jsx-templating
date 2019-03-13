@@ -2,7 +2,7 @@
 /**
  * PSR-4 Compliant Autoloader
  *
- * This will dynamically load interfaces by resolving the prefix and class name. This is the method that frameworks
+ * This will dynamically load classes by resolving the prefix and class name. This is the method that frameworks
  * such as Laravel and Composer automatically resolve class names and load them. To use it, simply set the
  * configurable parameters inside the closure. This example is taken from PHP-FIG, referenced below.
  *
@@ -12,8 +12,8 @@
 spl_autoload_register(function($class) {
 	/**
 	 * CONFIGURABLE PARAMETERS
-	 * prefix: the prefix for all the interfaces (i.e., the namespace)
-	 * baseDir: the base directory for all interfaces (default = current directory)
+	 * prefix: the prefix for all the classes (i.e., the namespace)
+	 * baseDir: the base directory for all classes (default = current directory)
 	 **/
 	$prefix = "Edu\\Cnm\\Ng4Demo";
 	$baseDir = __DIR__;
