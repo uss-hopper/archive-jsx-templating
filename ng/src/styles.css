@@ -12,7 +12,7 @@ body {
 	position: relative;
 }
 
-body::after {
+body::before{
 	content: "";
 	background: url("assets/img/meow-app.jpg") no-repeat 40% center;
 	background-attachment: fixed;

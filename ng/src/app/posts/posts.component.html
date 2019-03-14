@@ -1,6 +1,22 @@
-<div class="card-columns">
+<div class="container">
+	<form [formGroup]="creatPostForm" (submit)="createPosts()"  novalidate>
+		<div class="form-group">
+			<div class="input-group">
+				<textarea type="email" class="form-control" formControlName="postContent" placeholder="postBody"></textarea>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="input-group">
+				<input type="text" class="form-control" formControlName="postTitle" placeholder="title">
+			</div>
+		</div>
+		<div class="text-md-right">
+			<button type="submit" class="btn btn-primary">Sign In</button>
+		</div>
+	</form>
+</div>
 
-	{{posts | json}}
+<div class="card-columns">
 	<div class="card text-center" *ngFor="let post of posts">
 		<div class="card-body">
 			<h4 class="card-title">{{post.postTitle}}</h4>
