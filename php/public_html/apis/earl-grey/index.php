@@ -1,7 +1,6 @@
 
 <?php
-require_once dirname(__DIR__,3 ) .  "/php/lib/xsrf.php";
-require_once("/etc/apache2/capstone-mysql/Secrets.php");
+require_once dirname(__DIR__,3 ) .  "/lib/xsrf.php";
 
 use Edu\Cnm\Ng4Demo;
 

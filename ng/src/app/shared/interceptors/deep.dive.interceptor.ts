@@ -26,10 +26,13 @@ export class DeepDiveInterceptor implements HttpInterceptor {
 	 * @returns {Observable<HttpEvent<any>>} Observable for next interceptor to subscribe to
 	 **/
 	intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+
 		// hand off to the next interceptor
 		return(next.handle(request).pipe(map((event: HttpEvent<any>) => {
 			// if this is an HTTP Response, from Angular...
 			if(event instanceof HttpResponse && event.body !== null) {
+
+				console.log(event);
 				// create an event to return (by default, return the same event)
 				let dataEvent = event;
 
