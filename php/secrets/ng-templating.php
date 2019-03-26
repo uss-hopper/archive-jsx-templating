@@ -1,5 +1,5 @@
 <?php
-require_once("/var/www/Secrets.php");
+require_once("/var/www/secrets/Secrets.php");
 
 $config = [];
 
@@ -10,5 +10,5 @@ $api->anotherRandomKey = "abcdefghijklmnopqrstuvwxyz";
 
 $config["api"] = json_encode($api);
 
-$hideSecrets = new \Secrets("/var/www/secrets/projectname.ini");
+$hideSecrets = new \Secrets("/var/www/secrets/ng-templating.ini");
 $hideSecrets->setSecrets($config);
