@@ -10,13 +10,13 @@ services:
          - ./docker-compose-lesson.env
       environment:
          - MYSQL_HOST=mysql
-   frontend:
+   ng:
       build: ./frontend
       depends_on:
          - backend
       ports:
          - 80:80
-   mysql:
+   sql:
       build: ./mysql
       env_file:
          - ./docker-compose-lesson.env
