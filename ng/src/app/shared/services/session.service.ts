@@ -10,7 +10,7 @@ export class SessionService {
 
 	constructor(protected http:HttpClient) {}
 
-	private sessionUrl = "apis/earl-grey/";
+	private sessionUrl = "api/earl-grey/";
 
 	setSession() {
 		return (this.http.get<Status>(this.sessionUrl, {}));

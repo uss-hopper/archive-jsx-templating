@@ -9,7 +9,7 @@ export class PostService {
 	constructor(protected http: HttpClient) {
 	}
 
-	private postUrl = "apis/post/";
+	private postUrl = "api/post/";
 
 	getAllPosts() : Observable<Post[]> {
 		return(this.http.get<Post[]>(this.postUrl));

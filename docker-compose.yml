@@ -5,20 +5,19 @@ services:
    backend:
       build: ./php
       depends_on:
-         - mysql
+         - sql
       env_file:
          - ./docker-compose-lesson.env
       environment:
          - MYSQL_HOST=mysql
    ng:
-      build: ./frontend
+      build: ./ng
       depends_on:
          - backend
       ports:
          - 80:80
    sql:
-      build: ./mysql
+      build: ./sql
       env_file:
          - ./docker-compose-lesson.env
       ports:
-         - 33006:3306
