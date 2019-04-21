@@ -14,7 +14,7 @@ RUN composer install \
 # main build stage
 
 
-FROM ubuntu
+FROM ubuntu:minimal
 
 MAINTAINER webmaster@localhost
 

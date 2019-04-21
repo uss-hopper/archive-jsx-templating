@@ -143,10 +143,13 @@ class Secrets {
 	 **/
 	public function getPdoObject(): \PDO {
 
+		//grab the environment variables from the host.
+		$env = getenv();
+
 		// grab the encrypted mySQL properties file and crete the DSN
-		$dsn = "mysql:host=" .["MYSQL_HOST"] . ";dbname=" . $_ENV["MYSQL_DATABASE"];
+		$dsn = "mysql:host=" . $env["MYSQL_HOST"] . ";dbname=" . $env["MYSQL_DATABASE"];
 		$options = [PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"];
-		$pdo = new PDO($dsn, $_ENV["MYSQL_USER"], $_ENV["MYSQL_PASSWORD"], $options);
+		$pdo = new PDO($dsn, $env["MYSQL_USER"], $env["MYSQL_PASSWORD"], $options);
 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		return ($pdo);
 	}
