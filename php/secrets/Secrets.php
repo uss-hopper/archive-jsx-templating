@@ -1,6 +1,5 @@
 <?php
 require_once(dirname(__DIR__) . "/vendor/autoload.php");
-
 use phpseclib\Crypt\AES;
 
 
@@ -10,7 +9,7 @@ class Secrets {
 	 * password used for decrypting and encrypting
 	 * @var string $password
 	 **/
-	private $password = "--PASSWORD--";
+	private $password = "change me please";
 
 	/**
 	 * path to where the .ini file lives on the server.
@@ -140,19 +139,15 @@ class Secrets {
 	/**
 	 * connects to a mySQL database using the encrypted mySQL configuration
 	 *
-	 * @param string $filename path to the encrypted mySQL configuration file
 	 * @return \PDO connection to mySQL
 	 **/
 	public function getPdoObject(): \PDO {
 
 		// grab the encrypted mySQL properties file and crete the DSN
-		$config = self::getSecrets();
-		$dsn = "mysql:host=" . $config["hostname"] . ";dbname=" . $config["database"];
-		$options = array(\PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
-
-		// create the PDO interface and return it
-		$pdo = new PDO($dsn, $config["username"], $config["password"], $options);
-		$pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+		$dsn = "mysql:host=" .["MYSQL_HOST"] . ";dbname=" . $_ENV["MYSQL_DATABASE"];
+		$options = [PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"];
+		$pdo = new PDO($dsn, $_ENV["MYSQL_USER"], $_ENV["MYSQL_PASSWORD"], $options);
+		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		return ($pdo);
 	}
 
@@ -198,7 +193,6 @@ class Secrets {
 	 * decrypts text using AES 256 CBC mode using openssl_decrypt()
 	 *
 	 * @param string $ciphertext base 64 encoded ciphertext
-	 * @param string $password plaintext symmetric key
 	 * @param string $iv $iv used for encryption/decryption
 	 * @param string $salt salt used for encryption and decryption
 	 * @return string decrypted plaintext

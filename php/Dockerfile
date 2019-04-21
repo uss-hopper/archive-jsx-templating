@@ -17,7 +17,6 @@ RUN composer install \
 FROM ubuntu
 
 MAINTAINER webmaster@localhost
-ENV APACHE_DOCUMENT_ROOT=/var/www/html/
 
 RUN apt-get update && apt-get install -y tzdata
 
@@ -31,10 +30,6 @@ RUN apt-get install -y php \
 	curl lynx-common lynx \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& apt-get clean -y
-
-
-RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
-RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
 
 CMD /usr/sbin/apache2ctl -D FOREGROUND
 
