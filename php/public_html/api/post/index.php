@@ -25,24 +25,20 @@ $reply = new stdClass();
 $reply->status = 200;
 $reply->data = null;
 try {
+
 	//grab the database connection
-
-
 	$secrets =  new \Secrets("/var/www/secrets/ng-templating.ini");
 	$pdo = $secrets->getPdoObject();
+
 	//determine which HTTP method, store the result in $method
 	$method = array_key_exists("HTTP_X_HTTP_METHOD", $_SERVER) ? $_SERVER["HTTP_X_HTTP_METHOD"] : $_SERVER["REQUEST_METHOD"];
+
 	//sanitize and store input
 	$id = filter_input(INPUT_GET, "id", FILTER_VALIDATE_INT);
 	$postContent = filter_input(INPUT_GET, "postContent", FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
 	$postSunriseDate = filter_input(INPUT_GET, "postSunriseDate", FILTER_VALIDATE_INT);
 	$postSunsetDate = filter_input(INPUT_GET, "postSunsetDate", FILTER_VALIDATE_INT);
 	$postTitle = filter_input(INPUT_GET, "postTitle", FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
-	//if sunrise and sunset are available for date range search, format them
-	/*if(empty($postSunriseDate) === false && empty($postSunsetDate) === false) {
-		$postSunriseDate = \DateTime::createFromFormat("U", $postSunriseDate / 1000);
-		$postSunsetDate = \DateTime::createFromFormat("U", $postSunsetDate / 1000);
-	}*/
 	//begin if blocks for the allowed HTTP requests
 	if($method === "GET") {
 		setXsrfCookie();
