@@ -9,14 +9,14 @@ body {
 	position: relative;
 }
 
-body::after {
+body::before {
 	content: "";
-	background: url("./meow-app.") no-repeat 40% center;
+	background: url("shared/imgs/meow-app.jpg") no-repeat 40% center;
 	background-attachment: fixed;
 	filter: grayscale(0.75) opacity(0.5);
 	position:absolute;
-	height: 100%;
-	width: 100%;
+	height: 100vh;
+	width: 100vw;
 	z-index: -1;
 }
 

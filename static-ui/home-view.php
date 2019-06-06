@@ -41,9 +41,9 @@
 							</div>
 						</div>
 
-					</div><!--/.row-->
-				</div><!--/.container-fluid-->
-			</main>
+					</div>
+			</main><!--/.row-->
+		</div><!--/.container-fluid-->
 
 		</div>
 
