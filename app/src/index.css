@@ -11,7 +11,7 @@ body {
 
 body::after {
 	content: "";
-	background: url("./meow-app.jpg") no-repeat 40% center;
+	background: url("./meow-app.") no-repeat 40% center;
 	background-attachment: fixed;
 	filter: grayscale(0.75) opacity(0.5);
 	position:absolute;
