@@ -1,7 +1,7 @@
 <?php
 require_once (dirname(__DIR__, 3) . "/Classes/autoload.php");
 require_once (dirname(__DIR__, 3) . "/lib/xsrf.php");
-require_once ("/var/www/secrets/Secrets.php");
+require_once ("/etc/apache2/capstone-mysql/encrypted-config.php");
 use Edu\Cnm\Ng4Demo\Post;
 /**
  * API for Post class
@@ -26,9 +26,7 @@ $reply->status = 200;
 $reply->data = null;
 try {
 
-	//grab the database connection
-	$secrets =  new \Secrets("/var/www/secrets/ng-templating.ini");
-	$pdo = $secrets->getPdoObject();
+	$pdo = connectToEncryptedMySQL("/etc/apache2/capstone-mysql/ng4demo.ini");
 
 	//determine which HTTP method, store the result in $method
 	$method = array_key_exists("HTTP_X_HTTP_METHOD", $_SERVER) ? $_SERVER["HTTP_X_HTTP_METHOD"] : $_SERVER["REQUEST_METHOD"];

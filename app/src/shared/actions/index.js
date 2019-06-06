@@ -1,11 +1,11 @@
 import {httpConfig} from "../misc/http-config";
 
-export const getAllTweets = () => async dispatch => {
-	const {data} = await httpConfig("/apis/tweet/");
-	dispatch({type: "GET_ALL_TWEETS", payload: data})
+export const getAllPosts = () => async dispatch => {
+	const {data} = await httpConfig("/apis/post/");
+	dispatch({type: "GET_ALL_POSTS", payload: data})
 };
 
-export const getTweetByTweetId = (id) => async dispatch => {
-	const {data} = await httpConfig(`/apis/tweet/${id}`)
-	dispatch({type: "GET_USER", payload: data})
+export const getPostByPostId = (id) => async dispatch => {
+	const {data} = await httpConfig(`/apis/post/${id}`);
+	dispatch({type: "GET_POST", payload: data})
 };
