@@ -1,7 +1,0 @@
-{
-  "/api": {
-    "target": "https://bootcamp-coders.cnm.edu/~gkephart/ng-templating/public_html/",
-    "secure": "true",
-    "changeOrigin":"true"
-  }
-}
