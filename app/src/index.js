@@ -15,7 +15,7 @@ import reducers from "./shared/reducers";
 import {applyMiddleware, createStore} from "redux";
 import thunk from "redux-thunk";
 import {Provider} from "react-redux";
-import {Posts} from "./pages/Posts";
+import {Posts} from "./pages/posts/Posts";
 
 
 library.add(faUser, faSignOutAlt, faPencilAlt);

@@ -1,6 +1,8 @@
 import React, {useEffect} from "react"
 import {connect} from "react-redux";
-import {getAllPosts, getPostByPostId} from "../shared/actions";
+import {getAllPosts, getPostByPostId} from "../../shared/actions";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome/index";
+import {PostForm} from "./PostForm";
 
 const PostComponent = ({posts, getAllPosts}) => {
 
@@ -16,6 +18,9 @@ const PostComponent = ({posts, getAllPosts}) => {
 				<div className="container-fluid text-center text-sm-left">
 
 					<div className="row mb-3">
+						<div className="col">
+							<PostForm/>
+						</div>
 						<div className="col">
 							<h1>Meow Forum</h1>
 						</div>
