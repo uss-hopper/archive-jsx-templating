@@ -5,9 +5,6 @@
 
 	<body class="sfooter">
 		<div class="sfooter-content">
-
-			<?php require_once("navbar.php");?>
-
 			<main class="my-5 text-white">
 				<div class="container-fluid text-center text-md-left">
 					<div class="row">
