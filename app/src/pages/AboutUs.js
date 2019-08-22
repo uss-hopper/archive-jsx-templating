@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
 
 export const AboutUs = () => {
 	return(
@@ -37,7 +38,7 @@ export const AboutUs = () => {
 
 								<div className="my-2 text-right">
 									<span className="font-weight-light font-italic">Don't have an account?</span>
-									<button className="btn-link py-0 text-white border-0 font-weight-bold">Sign up today!</button>
+									<Button varient="link" className="py-0 text-white border-0 font-weight-bold">Sign up today!</Button>
 								</div>
 							</div>
 						</div>
