@@ -16,12 +16,14 @@ import {
 	faPencilAlt,
 	faSignInAlt,
 	faSortDown,
-	faUserCircle
+	faUserCircle,
+	faDog
 } from "@fortawesome/free-solid-svg-icons";
 import {NavBar} from "./shared/components/NavBar";
 import {faKey} from "@fortawesome/free-solid-svg-icons/faKey";
+import {Posts} from "./pages/Posts";
 
-library.add(faPencilAlt, faUserCircle, faSortDown, faEnvelope, faSignInAlt, faKey);
+library.add(faPencilAlt, faUserCircle, faSortDown, faEnvelope, faSignInAlt, faKey, faDog );
 
 const Routing = () => (
 	<>
@@ -29,6 +31,7 @@ const Routing = () => (
 			<NavBar/>
 			<Switch>
 				<Route exact path="/about-us" component={AboutUs} />
+				<Route exact path="/posts" component={Posts} />
 				<Route exact path="/" component={Home} />
 				<Route component={FourOhFour} />
 			</Switch>

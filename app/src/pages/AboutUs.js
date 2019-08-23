@@ -35,11 +35,6 @@ export const AboutUs = () => {
 												focusing solely on the bottom line.</p>
 									</Card.Body>
 								</Card>
-
-								<div className="my-2 text-right">
-									<span className="font-weight-light font-italic">Don't have an account?</span>
-									<Button varient="link" className="py-0 text-white border-0 font-weight-bold">Sign up today!</Button>
-								</div>
 							</div>
 						</div>
 					</div>

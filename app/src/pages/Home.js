@@ -40,7 +40,7 @@ export const Home = () => {
 												</InputGroup>
 											</Form.Group>
 											<div className="text-md-right">
-												<Button variant="primary"> Sign In <FontAwesomeIcon icon="sign-in-alt"/>
+												<Button variant="primary" type="submit"> Sign In <FontAwesomeIcon icon="sign-in-alt"/>
 												</Button>
 											</div>
 										</Form>
