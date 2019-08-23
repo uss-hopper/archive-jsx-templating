@@ -9,7 +9,7 @@ export const NavBar = () => (
 	<>
 		<header>
 			<Navbar bg="dark" expand="sm" variant="dark">
-				<Link exact to="/"><Navbar.Brand>ReactInfinity ÷ -0</Navbar.Brand> </Link>
+				<Link exact to="/"><Navbar.Brand>Infinity ÷ -0</Navbar.Brand> </Link>
 				<Navbar.Toggle aria-controls="basic-navbar-nav"/>
 				<Navbar.Collapse>
 					<Navbar.Text>
