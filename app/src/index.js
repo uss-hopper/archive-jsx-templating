@@ -4,21 +4,27 @@ import 'bootstrap/dist/css/bootstrap.css';
 import {BrowserRouter} from "react-router-dom";
 import {Route, Switch} from "react-router";
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 
 import {FourOhFour} from "./pages/FourOhFour";
 import {Home} from "./pages/Home";
 import {AboutUs} from "./pages/AboutUs";
 import "./index.css";
-import {faHome, faPencilAlt, faSortDown, faUserCircle} from "@fortawesome/free-solid-svg-icons";
+import {
+	faEnvelope,
+	faPencilAlt,
+	faSignInAlt,
+	faSortDown,
+	faUserCircle
+} from "@fortawesome/free-solid-svg-icons";
 import {NavBar} from "./shared/components/NavBar";
+import {faKey} from "@fortawesome/free-solid-svg-icons/faKey";
 
-library.add(faPencilAlt, faUserCircle, faSortDown);
+library.add(faPencilAlt, faUserCircle, faSortDown, faEnvelope, faSignInAlt, faKey);
 
 const Routing = () => (
 	<>
-
 		<BrowserRouter>
 			<NavBar/>
 			<Switch>

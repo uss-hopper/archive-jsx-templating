@@ -1,12 +1,9 @@
 import React from "react"
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import Nav from "react-bootstrap/Nav";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import NavLink from "react-bootstrap/NavLink";
-
 import {Link} from "react-router-dom";
-import Container from "react-bootstrap/Container";
 
 export const NavBar = () => (
 	<>
@@ -16,9 +13,9 @@ export const NavBar = () => (
 				<Navbar.Toggle aria-controls="basic-navbar-nav"/>
 				<Navbar.Collapse>
 					<Navbar.Text>
-						Signed in as: <a href="*">Foo Bar Baz</a>
+						Signed in as: <a href="/">Foo Bar Baz</a>
 					</Navbar.Text>
-					<NavDropdown title="CLICK ME" bg="dark" varient="dark" id="basic-nav-dropdown">
+					<NavDropdown className="font-weight-light font-italic" title="CLICK ME"   >
 						<NavLink>
 							<Link exact to="/about-us">
 								About Us <FontAwesomeIcon icon="user-circle"/>
