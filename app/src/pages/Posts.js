@@ -30,17 +30,24 @@ export const Posts = () => {
 										<Form>
 											<Form.Group>
 												<InputGroup>
+													<FormControl placeholder="Title Goes Here"/>
+												</InputGroup>
+											</Form.Group>
+
+											<Form.Group>
+												<InputGroup>
 													<InputGroup.Prepend>
 														<InputGroup.Text>
 															<FontAwesomeIcon icon="dog"/>
 														</InputGroup.Text>
 													</InputGroup.Prepend>
 													<FormControl as="textarea" placeholder="Meow Meow Goes Here"/>
-													<InputGroup.Append> <Button variant="primary" type="submit"> Submit <FontAwesomeIcon icon="envelope"/>
-													</Button></InputGroup.Append>
+													<InputGroup.Append>
+														<Button variant="primary" type="submit"> Submit <FontAwesomeIcon
+															icon="envelope"/></Button>
+													</InputGroup.Append>
 												</InputGroup>
 											</Form.Group>
-
 										</Form>
 									</Card.Text>
 								</Card.Body>
