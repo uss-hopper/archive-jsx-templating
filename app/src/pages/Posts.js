@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useEffect} from "react";
+import {useSelector, useDispatch} from "react-redux";
 import Container from "react-bootstrap/es/Container";
 import Card from "react-bootstrap/Card";
 import CardColumns from "react-bootstrap/CardColumns";
@@ -9,8 +10,23 @@ import InputGroup from "react-bootstrap/InputGroup";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import FormControl from "react-bootstrap/es/FormControl";
 import Button from "react-bootstrap/Button";
+import {getAllPosts} from "../shared/actions/post";
+
 
 export const Posts = () => {
+
+	const posts = useSelector(state => state.posts ? state.posts : []);
+
+	console.log(posts);
+
+	const dispatch = useDispatch();
+
+	const effectInputs = undefined;
+
+	useEffect(() => {
+		dispatch(getAllPosts())
+	}, []);
+
 	return (
 		<>
 			<main className="my-5">
@@ -54,15 +70,19 @@ export const Posts = () => {
 							</Card.Body>
 						</Card>
 						<CardColumns className="p-4">
-							<Card className="card text-center">
-								<div className="card-body">
-									<Card.Title>Card title</Card.Title>
-									<Card.Text>
-										<p>This card has supporting text below as a natural lead-in to additional content</p>
-										<p><small className="text-muted">Last updated 3 mins ago</small></p>
-									</Card.Text>
-								</div>
-							</Card>
+
+							{
+								posts.map(post => (
+									<Card className="card text-center">
+										<div className="card-body">
+											<Card.Title>{post.postTitle}</Card.Title>
+											<Card.Text>
+												{post.postContent}
+												<small className="text-muted">{post.postDate}</small>
+											</Card.Text>
+										</div>
+									</Card>))
+							}
 						</CardColumns>
 					</Row>
 
