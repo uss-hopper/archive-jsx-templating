@@ -9,7 +9,7 @@ export const NavBar = () => (
 	<>
 		<header>
 			<Navbar bg="dark" expand="sm" variant="dark">
-				<Link exact to="/"><Navbar.Brand>Infinity ÷ -0</Navbar.Brand> </Link>
+				<Link to="/"><Navbar.Brand>Infinity ÷ -0</Navbar.Brand> </Link>
 				<Navbar.Toggle aria-controls="basic-navbar-nav"/>
 				<Navbar.Collapse>
 					<Navbar.Text>
@@ -17,12 +17,12 @@ export const NavBar = () => (
 					</Navbar.Text>
 					<NavDropdown className="font-weight-light font-italic" title="CLICK ME"   >
 						<NavLink>
-							<Link exact to="/about-us">
+							<Link to="/about-us">
 								About Us <FontAwesomeIcon icon="user-circle"/>
 							</Link>
 						</NavLink>
 						<NavLink>
-							<Link exact to="/posts">
+							<Link to="/posts">
 								Posts <FontAwesomeIcon icon="pencil-alt"/>
 							</Link>
 						</NavLink>

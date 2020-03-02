@@ -73,12 +73,13 @@ export const Posts = () => {
 
 							{
 								posts.map(post => (
-									<Card className="card text-center">
+									<Card className="card text-center" key={post.postId}>
 										<div className="card-body">
 											<Card.Title>{post.postTitle}</Card.Title>
 											<Card.Text>
 												{post.postContent}
-												<small className="text-muted">{post.postDate}</small>
+												<br/>
+
 											</Card.Text>
 										</div>
 									</Card>))
