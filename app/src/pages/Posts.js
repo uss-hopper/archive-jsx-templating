@@ -1,5 +1,4 @@
 import React from "react";
-import Container from "react-bootstrap/es/Container";
 import Card from "react-bootstrap/Card";
 import CardColumns from "react-bootstrap/CardColumns";
 import Row from "react-bootstrap/Row";
@@ -7,8 +6,9 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import FormControl from "react-bootstrap/es/FormControl";
+import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
+import Container from 'react-bootstrap/Container'
 
 export const Posts = () => {
 	return (
