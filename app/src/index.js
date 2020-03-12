@@ -19,7 +19,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { NavBar } from './shared/components/NavBar'
 import { faKey } from '@fortawesome/free-solid-svg-icons/faKey'
-import { Posts } from './pages/Posts'
+import { Posts } from './pages/posts/Posts'
 import { applyMiddleware, createStore } from 'redux'
 import { combinedReducers } from './shared/reducers'
 import thunk from 'redux-thunk'

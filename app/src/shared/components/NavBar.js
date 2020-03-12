@@ -9,13 +9,13 @@ export const NavBar = () => (
 	<>
 		<header>
 			<Navbar bg="dark" expand="sm" variant="dark">
-				<Link exact to="/"><Navbar.Brand>Infinity ÷ -0</Navbar.Brand> </Link>
+				<Link  to="/"><Navbar.Brand>Infinity ÷ -0</Navbar.Brand> </Link>
 				<Navbar.Toggle aria-controls="basic-navbar-nav"/>
 				<Navbar.Collapse>
 					<Navbar.Text>
 						Signed in as: <a href="/">Foo Bar Baz</a>
 					</Navbar.Text>
-					<NavDropdown className="font-weight-light font-italic" title="CLICK ME"   >
+					<NavDropdown id="page-drop-down" className="font-weight-light font-italic" title="CLICK ME"   >
 						<NavLink>
 							<Link exact to="/about-us">
 								About Us <FontAwesomeIcon icon="user-circle"/>

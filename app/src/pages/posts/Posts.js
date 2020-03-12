@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from 'react'
 import Card from "react-bootstrap/Card";
 import CardColumns from "react-bootstrap/CardColumns";
 import Row from "react-bootstrap/Row";
@@ -9,8 +9,24 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 import Container from 'react-bootstrap/Container'
+import { useDispatch, useSelector } from 'react-redux'
+import { getAllPosts } from '../../shared/actions/post-actions'
+import { PostCard } from './PostCard'
 
 export const Posts = () => {
+	const dispatch = useDispatch();
+	const posts = useSelector(state => {
+		console.log(state)
+		return state.posts ? state.posts : []});
+	console.log(posts)
+
+	const sideEffects = () => {
+		dispatch(getAllPosts())
+	}
+	const sideEffectInputs = [];
+
+	useEffect(sideEffects, sideEffectInputs)
+
 	return (
 		<>
 			<main className="my-5">
@@ -53,15 +69,7 @@ export const Posts = () => {
 								</Card.Body>
 							</Card>
 						<CardColumns className="p-4">
-						<Card className="card text-center">
-							<div className="card-body">
-								<Card.Title>Card title</Card.Title>
-								<Card.Text >
-									<p>This card has supporting text below as a natural lead-in to additional content</p>
-									<p><small className="text-muted">Last updated 3 mins ago</small></p>
-								</Card.Text>
-							</div>
-						</Card>
+							{ posts.map(post => (<PostCard post={post} sleepyMarty="true"/>))}
 					</CardColumns>
 					</Row>
 
