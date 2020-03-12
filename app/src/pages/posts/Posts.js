@@ -12,6 +12,7 @@ import Container from 'react-bootstrap/Container'
 import { useDispatch, useSelector } from 'react-redux'
 import { getAllPosts } from '../../shared/actions/post-actions'
 import { PostCard } from './PostCard'
+import { PostForm } from './PostForm'
 
 export const Posts = () => {
 	const dispatch = useDispatch();
@@ -43,28 +44,7 @@ export const Posts = () => {
 							<Card bg="shadow-light" className="border-0 rounded-6 col" >
 								<Card.Body>
 									<Card.Text>
-										<Form>
-											<Form.Group>
-												<InputGroup>
-													<FormControl placeholder="Title Goes Here"/>
-												</InputGroup>
-											</Form.Group>
-
-											<Form.Group>
-												<InputGroup>
-													<InputGroup.Prepend>
-														<InputGroup.Text>
-															<FontAwesomeIcon icon="dog"/>
-														</InputGroup.Text>
-													</InputGroup.Prepend>
-													<FormControl as="textarea" placeholder="Meow Meow Goes Here"/>
-													<InputGroup.Append>
-														<Button variant="primary" type="submit"> Submit <FontAwesomeIcon
-															icon="envelope"/></Button>
-													</InputGroup.Append>
-												</InputGroup>
-											</Form.Group>
-										</Form>
+										<PostForm/>
 									</Card.Text>
 								</Card.Body>
 							</Card>
