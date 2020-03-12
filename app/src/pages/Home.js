@@ -14,7 +14,7 @@ export const Home = () => {
 			<main className="d-flex align-items-end align-items-md-center mh-80">
 				<Container fluid="true" className="text-center text-md-left">
 					<Row>
-						<div className="col-md-6 offset-md-6 col-lg-4 offset-lg-8">
+						<div className="">
 							<Card bg="shadow-light" className="border-0 rounded-6">
 								<Card.Body>
 									<Card.Text>
